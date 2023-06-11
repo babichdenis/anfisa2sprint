@@ -4,8 +4,8 @@ from core.models import PublishedModel
 
 
 class Category(PublishedModel):
-    title = models.CharField(max_length=256, verbose_name='Название')
-    slug = models.SlugField(max_length=64, unique=True, verbose_name='Слаг')
+    title = models.CharField('Название', max_length=256)
+    slug = models.SlugField('Слаг', max_length=64, unique=True)
     output_order = models.PositiveSmallIntegerField(
         default=100,
         verbose_name='Порядок отображения'
